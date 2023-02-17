@@ -1,0 +1,455 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+}
+:root{
+    --primary: indianred;
+    --secondar: rgba(15, 10, 29, 0.849);
+    --light: #2f3640;
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+.nav1{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow:2px 0px 3px grey;
+   text-align: center; 
+}
+.nav1 .left{
+    flex-basis: 5%;
+    letter-spacing: 1px;
+}
+.nav12 .left{
+    flex-basis: 50%;
+    letter-spacing: 1px;
+    padding-left: -50px;
+}
+.nav1 .left a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    margin: 0px 5px;
+}
+.nav1 .left a:hover{
+    text-rendering: auto;
+}
+.right{
+    flex-basis: 50%;
+}
+.right h1{
+    font-size: 20px;
+    margin: 0px 15px;
+    background-color: red;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.nav1 .right h1:hover{
+    transform: rotate(360deg);
+}
+.nav2{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.nav2 .nav2-left,.nav2 .nav2-centre,.nav2 .nav2-right{
+    flex-basis: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+.nav2 .nav2-left i{
+    margin-left: 15px;
+}
+.nav2 .nav2-centre h1{
+    color: var(--primary);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.nav2 .nav2-centre h1 span{
+    color: var(--secondar);
+}
+.nav2 .nav2-centre p{
+    color: grey;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.nav2 .nav2-right i{
+    margin: 0px 5px;
+}
+.nav3{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+.nav3 ul{
+    list-style: none;
+    text-align: center;
+}
+.nav3 ul li{
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    z-index: 99;
+}
+.nav3 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: block;
+}
+.nav3 ul li a:hover{
+    color: var(--primary);
+}
+.nav3 ul li i{
+    margin: 0px 5px;
+}
+.nav3 ul ul{
+    position: absolute;
+    top:  70px;
+    left: 0;
+    display: none;
+}
+.nav3 ul ul li{
+    background-color: white;
+    border-bottom: 1px solid var(--primary);
+}
+.nav3 ul li:hover>ul{
+    display: block;
+}
+.featured{
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(to right,rgba(0,0,0,1) 30%,rgba(255,255,255,0.2)),
+                 url('img/this-is-same-shoes_329181-1769.webp');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.featured-text{
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-family: 'Akaya Telivigala', cursive;
+}
+.featured-text button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: var(--secondar);
+    margin: 20px 0px;
+    color: white;   
+}
+.latest{
+    padding: 50px 100px;
+}
+.product-intro{
+    text-align: center;
+}
+.product-intro h1{
+    color: var(--primary);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.product-intro h1 span{
+    color: var(--secondar);
+}
+.product-intro p{
+    color: grey;
+    margin: 15px 0px;
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: var(--light);
+    margin: 4rem 0;
+}
+.card-container .card{
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+}
+ .card img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.card i{
+    color: goldenrod;
+    margin: 10px 0;
+}
+.card button{
+    color: white;
+    background-color: var(--secondar);
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    padding: 5px 20px;
+}
+.card:hover img, .card:hover h1{
+    width: 80%;
+    color: var(--primary);
+}
+.card:before{
+    content:'20% off';
+    width: 25%;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    position: var(--primary);
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    padding: 0px 4px;
+    transform: rotateX(-20deg);
+}
+.trends{
+    padding: 50px 100px;
+    background-color: rgba(0,0,0,0.01);
+}
+.trends .swiper-container {
+    width: 100%;
+    padding: 20px;
+
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    padding: 0px 0px;
+  }
+  footer{
+    background-color: var(--secondar);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem;
+  }
+  footer div{
+    flex-basis: 30%;
+  }
+  footer h1{
+    letter-spacing: 0.5rem;
+  }
+  footer h1 span{
+    color: var(--primary);
+  }
+  footer p{
+    font-size: 1rem;
+  }
+  footer i{
+    margin: 0px 5px;
+  }
+  #sidenav{
+    display: none;
+  }
+  #menubar{
+    display: none;
+  }
+  @media only screen and (max-width:900px){
+
+    #sidenav{
+        display: block;
+        overflow: hidden;
+        transition: 2s ease-in-out;
+    }
+    #menubar{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(0%, -50%);
+        z-index: 99;
+        background-color: var(--primary);
+        color: white;
+        font-size: 2rem;
+        padding: 20px 10px;
+        animation: animate 5s ease infinite;
+    }
+    @keyframes animate {
+        0%{
+            background-color: var(--secondar);
+        }
+         100%{
+            background-color: var(--primary);
+        }
+    }
+
+    .nav1{ 
+        position: relative;
+        z-index: 2;
+        background-color: white;
+    }
+    .right i{
+        font-size: 15px;
+        margin: 0px 5px;
+    }
+    .nav2{
+        width: 100%;
+        height: 80px;
+       
+    }
+    .nav2 .nav2-left i{
+        margin-left: 0px;
+    }
+    .nav2 .nav2-centre h1{
+        color: var(--primary);
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .nav2 .nav2-centre h1 span{
+        color: var(--secondar);
+    }
+    .nav2 .nav2-centre p{
+        color: grey;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .nav2 .nav2-right i{
+        margin: 0px 5px;
+    }
+    .nav3{
+        display: none;
+    }
+    .featured{
+        background-attachment: fixed;
+    }
+    
+.latest{
+    padding: 0px 40px;
+}
+.product-intro{
+    text-align: center;
+}
+.product-intro p{
+    color: gray;
+    margin: 15px 0px;
+}
+.card-container{
+   flex-basis: 100%;
+    margin: 2rem 0;
+}
+.card-container .card{
+    flex-basis:100%;
+    padding: 0.8rem;
+    position: relative;
+    text-align: center;
+}
+ .card img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.card i{
+    color: goldenrod;
+    margin: 10px 0;
+}
+.card button{
+    color: white;
+    background-color: var(--secondar);
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    padding: 5px 20px;
+}
+.trends{
+    padding: 20px 50px;
+    background-color: rgba(0,0,0,0.01);
+}
+.trends .swiper-container {
+    width: 100%;
+    padding: 20px;
+
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 80%;
+    height: 100%;
+    padding:  0px 0px;
+  }
+  footer div{
+    flex-basis: 30%;
+  }
+
+
+#sidenav ul{
+    list-style: none;
+    transition: 5s;
+    
+}
+#sidenav ul li{
+    display: block;
+    width: 200px;
+    position: relative;
+    z-index: 99;
+    margin: 10px 20px;
+}
+#sidenav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    display: block;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+#sidenav ul li a:hover{
+    color: var(--primary);
+}
+#sidenav ul li i{
+    margin: 0px 5px;
+}
+#sidenav ul ul{
+    position: absolute;
+    top:  70px;
+    left: 0;
+    display: none;
+}
+#sidenav ul ul li{
+    
+    color: white;
+    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--primary);
+}
+#sidenav ul li:hover>ul{
+    display: block;
+}
